@@ -1,0 +1,48 @@
+Check Git is installed
+************************
+			git --version
+
+
+configure git username and email
+**************************************
+		git config --global user.name "Your Name"
+		git config --global user.email "your@email.com"
+
+Verifying the credentials:
+****************************
+		git config --global --list
+
+
+
+Intialize a Git repository:
+***************************
+		git init
+
+
+Connect local repo to remote (GitHub / GitLab)
+****************************************************
+		git remote add origin https://github.com/username/repository.git
+
+Verify remote
+***************
+		 git remote -v
+
+
+Create a branch
+*******************
+		git branch branchname
+
+Switch back to another branch
+***********************************
+		git checkout main
+			(or)
+		git switch main
+
+Delete branch locally
+*************************
+		git branch -D branchname
+
+
+Check the branches:
+***********************
+		git branch
