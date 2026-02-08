@@ -178,3 +178,66 @@ if i want to undo the changes
 
 
 
+Git branching:
+***************
+A branch in git is a separate line of development that lets you work on features or fixes without affecting the main code
+
+
+A branch is a safe copy of the project where you can experiment
+
+Real life example:
+	rough notebook in exam is branch
+	main notebook is the main branch
+
+1. git branch
+shows all branches
+
+**  git branch
+
+
+2. git branch <name>
+create  a new branch
+
+
+**  git branch branchname
+
+created but not switched
+
+3. git checkout <branch>
+switch to another branch
+
+**  git checkout branchname
+
+
+4. git checkout -b <branch>
+
+create + switch in one step 
+
+Important
+***********     git checkout -b branchname
+
+
+5, git merge
+merge branch into current branch
+
+*****     git checkout main
+	    git merge branchname
+
+
+
+Workflow
+**********
+
+main
+ ↓
+create feature branch
+ ↓
+write code
+ ↓
+commit changes
+ ↓
+merge into main
+
+
+
+
