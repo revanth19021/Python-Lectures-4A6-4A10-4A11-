@@ -46,3 +46,91 @@ Delete branch locally
 Check the branches:
 ***********************
 		git branch
+
+
+
+
+
+Git is a distributed version control system used to track changes in source code and help multiple developers work together.
+
+In Simple Words
+
+“Git remembers every change in your code and lets you go back anytime.
+
+
+There are 3 Main Areas in Git:
+1. working directory
+2. Staging Area
+3. Repository
+
+1. working directory
+  where you write and edit code
+  normal folder on the computer
+
+
+2. staging area
+
+ it is a temporary  area
+ we select what changes need to be saved
+
+3. repository
+
+where git permanently stores changes
+contains full history
+
+
+Basic Git Commands Revision(for Devops)
+
+1. git init
+creates a new git repository
+
+**********    git init    **********
+
+Real life: start tracking this folder
+
+
+
+2. git status
+shows current state of files
+
+**********    git status    **********
+
+Tells us the modified files,staged files,untracked files
+
+
+3. git add
+moves files to staging area
+
+
+git add filename.py
+git add .
+
+
+4. git commit
+Saves Changes to repository with a message
+
+git commit -m "Added Features"
+
+
+5. git log
+shows commit history
+
+git log
+
+
+6. git diff
+Shows what changed
+
+git diff
+
+
+
+Git + remote repository
+**************************
+
+
+Remote repo means code stored online  
+
+
+
+
