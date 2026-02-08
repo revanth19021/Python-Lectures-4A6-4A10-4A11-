@@ -169,5 +169,12 @@ push → upload
 pull → download
 
 
+if i want to commit all the changes 
+git commit -am "updated text"
+
+if i want to undo the changes 
+
+"git restore "filename"
+
 
 
