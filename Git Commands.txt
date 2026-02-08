@@ -129,7 +129,44 @@ Git + remote repository
 **************************
 
 
-Remote repo means code stored online  
+Remote repo means code stored online 
+
+7 git remote add
+
+git remote add origin <Repository url>
+
+
+8. git push
+ send code to remote repository
+
+9. git pull
+get latest code from remote
+
+git pull origin branchname
+
+Edit file
+ ↓
+git status
+ ↓
+git add .
+ ↓
+git commit -m "message"
+ ↓
+git push
+
+
+
+init → start Git
+
+status → check changes
+
+add → select changes
+
+commit → save changes
+
+push → upload
+
+pull → download
 
 
 
