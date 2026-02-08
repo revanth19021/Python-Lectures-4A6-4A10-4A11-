@@ -240,4 +240,12 @@ merge into main
 
 
 
+What problem do Merge & Rebase solve?
+
+When you work with branches, at some point you need to:
+	bring changes from one branch into another
+
+That’s where merge and rebase come in.
+
+
 
