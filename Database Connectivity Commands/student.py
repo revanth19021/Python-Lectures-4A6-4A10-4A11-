@@ -1,17 +1,14 @@
-from flask import Flask,render_template
 from pymongo import MongoClient
-
-client=MongoClient("mongodb://localhost:27017/")
+client=MongoClient("mongodb://127.0.0.1:27017/")
 db=client["student_db"]
-
 collection=db["students"]
-
-student={
-    "name":"Alice",
-    "age":20,
-    "marks":85
-}
-collection.insert_one(student)
+# student={
+#     "name":"Alice",
+#     "age":20,
+#     "marks":85
+# }
+collection.insert_one({"name":"revanth","email":"revanth200319@gmail.com"})
+print("Data is inserted")
 students=collection.find()
 for student in students:
     print(student)

@@ -1,6 +1,6 @@
-from flask import Flask,render_template
 import sqlite3
 
+from sqlite3 import connect
 # 1. import sqlite3
 # 2. connect()
 # 3. cursor()
@@ -8,10 +8,7 @@ import sqlite3
 # 5. commit()
 # 6. close()
 
-
-app=Flask(__name__)
-
-connection=sqlite3.connect('student.db')
+connection=connect('student.db')
 
 cursor=connection.cursor()
 
@@ -36,6 +33,8 @@ cursor.execute(
     "INSERT INTO students (name, age, marks) VALUES (?, ?, ?)",
     (name, age, marks)
 )
+cursor.execute('''INSERT INTO students(name,age,marks) VALUES("revanth",100,150)''')
+
 
 connection.commit()
 print("Student added successfully")
