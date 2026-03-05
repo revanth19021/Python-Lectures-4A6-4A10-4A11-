@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! This is a sample Flask application.</p>
+
+        <!-- Display image from static folder -->
+        <img src="{{ url_for('static', filename='wallpaper.jpg') }}" alt="Profile Image">
+        <img src="{{url_for('static',filename="wallpaper.jpg")}}" alt="images">
+
+    </div>
+
+</body>
+</html>

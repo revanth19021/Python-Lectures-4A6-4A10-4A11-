@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flash Example</title>
+</head>
+<body>
+
+    <h2>Login Page</h2>
+
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Enter Username">
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                    {% if category == 'success' %}
+                    {% elif category == 'error' %}
+                    {% endif %}
+                    {{ message }}   
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
