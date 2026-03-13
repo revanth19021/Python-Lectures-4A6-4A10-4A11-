@@ -13,6 +13,9 @@
         <a href='/login'>Login Page</a>
     </nav>
     <h2>Registration</h2>
+    {% if message%}
+    {{message}}
+    {% endif %}
     <form action='/registration' method='post'>
         emailid: <input type="email" name="email" placeholder="Enter Email id: ">
         <br><br>

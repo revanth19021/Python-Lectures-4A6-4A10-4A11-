@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> This is the main page afterr login</h2>
+  
+
+    <table>
+        <tr>
+            <th>username</th>
+            <th>password</th>
+            <th>email</th>
+        </tr>
+        {% for i in users%}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.emailid}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

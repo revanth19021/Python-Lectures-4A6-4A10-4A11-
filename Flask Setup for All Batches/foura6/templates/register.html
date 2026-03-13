@@ -12,6 +12,9 @@
         <a href='/reg'>Register Page</a>
     </nav>
     <h2>Register form</h2>
+    {% if message%}
+    {{message}}
+    {% endif %}
     <form action='/registration' method="POST">
         Email-id: <input type="email" name="email" placeholder="Enter Email id: ">
         <br><br>

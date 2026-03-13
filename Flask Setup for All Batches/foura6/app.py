@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,session
 # create an object to the Flask class
 # from pymongo import MongoClient
 # client=MongoClient('mongodb://127.0.0.1:27017/')
@@ -41,7 +41,7 @@ def registration1():
     password=request.form['password']
     cnfpassword=request.form['cnf']
     if password!=cnfpassword:
-        return "Please enter Same password"
+        return render_template('register.html',message='Please enter both passwords correctly')
     user=collection.find_one({'username':u})
     if user:
         return "ALready Registered"
@@ -52,9 +52,23 @@ def registration1():
     })
     return "data registered"
     
-    
+@app.route('/login-verify',methods=['post'])
+def loginverification():
+    a=request.form.get('user')
+    b=request.form.get('password')  
+    user=collection.find_one({
+        'username':a,
+        'password':b
+    })
+    values = collection.find({}, {"_id": 0}) 
+    if user:
+        session['username']=a
+        return render_template('main.html',users=values)
+    return render_template('login.html')
+
+
 
 if __name__=="__main__":
-    app.run(port=5000,debug=True)
+    app.run(port=7000,debug=True)
 
 #port # host #debug=

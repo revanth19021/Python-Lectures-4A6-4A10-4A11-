@@ -5,6 +5,9 @@
 <body>
     <h2>Registration Page</h2>
     <br><br>
+    {% if message%}
+    {{message}}
+    {% endif %}
     <form action='/reg' method='post'>
         Username: <input type="text" name="user" placeholder="Enter username: ">
         <br><br>
